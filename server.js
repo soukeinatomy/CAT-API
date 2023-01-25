@@ -7,10 +7,10 @@ const express = require('express')
 const morgan = require('morgan') 
 require('dotenv').config() 
 const path = require('path') 
-const catRouter = require('./controllers/catControllers')
-const UserRouter = require('./controllers/userControllers')
-const CommentRouter = require('./controllers/commentControllers')
-const middleware = require('./utils/middleware')
+// const catRouter = require('./controllers/catControllers')
+// const UserRouter = require('./controllers/userControllers')
+// const CommentRouter = require('./controllers/commentControllers')
+//const middleware = require('./utils/middleware')
 
 
 const app = express()
@@ -19,7 +19,7 @@ const app = express()
 //// Middleware                  ////
 /////////////////////////////////////
 
-middleware(app)
+//middleware(app)
 
 
 /////////////////////////////////////
@@ -30,9 +30,9 @@ app.get('/', (req, res) => {
 })
 
 
-app.use('/cats', catRouter)
-app.use('/comments', CommentRouter)
-app.use('/users', UserRouter)
+// app.use('/cats', catRouter)
+// app.use('/comments', CommentRouter)
+// app.use('/users', UserRouter)
 
 /////////////////////////////////////
 //// Server Listener             ////
